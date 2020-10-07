@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+
+h1 {
+  font-family: sans-serif;
+  color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+.stories,
+.card-deck {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2px;
+  height: 100%;
+  padding-top: 1%;
+  align-items: stretch;
+}
+
+.card .btn-primary {
+  background-color: #172634 !important;
+  color: #76abb8 !important;
+  border: none;
+}
+.card .btn-primary:hover {
+  background-color: #76abb8 !important;
+  color: #172634 !important;
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #172634 no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: url(/media/23.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+  font-family: "Roboto Mono", monospace;
+}
+
+@media screen and (max-width: 1024px) {
+  /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px; /* 50% */
+  }
+}
+li,
+a {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+header .header,
+nav {
+  font-family: "Roboto Mono", monospace;
+  display: table;
+  width: 100%;
+  margin: 0;
+  align-items: right;
+  text-align: right;
+  justify-content: space-between;
+  float: right;
+  padding: 15px;
+  background-color: #172634;
+  opacity: 1;
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.nav_link {
+  list-style: none;
+}
+
+.nav_link > li {
+  display: inline-block;
+  padding: 0px 27px;
+  font-family: "Roboto Mono", monospace;
+}
+.nav_link li > a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_link li a:hover {
+  color: #578798;
+  text-decoration: none;
+  font-size: large;
+}
+.story-detail,
+h2 {
+  background-color: white;
+  color: #172634;
+  font-family: "Roboto Mono", monospace;
+}
+
+.text-muted {
+  position: absolute;
+  bottom: 50px;
+  position: absolute;
+  margin-top: 10px;
+  color: #76abb8;
+  font-weight: lighter;
+  font-size: small;
+  font-family: "Roboto Mono", monospace;
+}
+
+.stories .btn btn-primary {
+  background-color: #578798;
+}
+h5 {
+  font-weight: bolder;
+}
+.site-form input[type="submit"] {
+  background: #bfe4ec;
+  color: #172634;
+  border: 0;
+  font-size: 1.2em;
+  border-radius: 7px;
+  margin: 20px 0;
+}
+
+button {
+  color: white;
+  background: none;
+  border: none;
+  justify-self: right;
+  justify-items: right;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: #578798;
+  transition: all 0.3s ease 0s;
+}
+.site-form {
+  background: none;
+  margin-top: 60px;
+  border: 1px;
+  display: block;
+  padding: 50px;
+}
+.site-form input,
+.site-form textarea {
+  margin: 20px 0 0 0;
+  padding: 10px;
+  display: block;
+}
+a.highlight {
+  border-radius: 10px;
+  color: grey;
+}
+
+.helptext,
+.helptext ul {
+  color: white;
+  background-color: #578798;
+  font-style: italic;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 auto;
+  font-size: 0.9em;
+  display: block;
+}
+.errorlist li {
+  padding: 10px;
+  list-style: none;
+  border: 1px solid red;
+  color: yellow;
+  margin: 10px 0;
+}
+.errorlist {
+  padding: 0;
+}
+
+.site-form input[type="submit"]:hover {
+  background: #578798;
+}
+
+.site-form input[type="text"] {
+  border-radius: 10px;
+  margin-left: 20px 0;
+  width: 300px;
+  border: 0;
+}
+.site-form input[type="password"] {
+  border-radius: 10px;
+  margin: 20px 0;
+  border: 0;
+  width: 300px;
+}
+.site-form input[type="text"]:hover {
+  text-decoration: none;
+  border: #172634;
+}
+h3 {
+  background-color: white;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+}
+label {
+  color: white;
+  background-color: #172634;
+  font-style: italic;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 1.5em;
+  display: block;
+}
+textarea {
+  border-radius: 10px;
+}
+
+.card-text {
+  font-size: medium;
+}
+.btn-light {
+  margin: 10px;
+}
+h4 {
+  padding: 10px;
+  margin: 60px;
+  text-align: center;
+  background-color: white;
+  color: #172634;
+  border-radius: 10px;
+}
+
+.story-detail {
+  padding: 15%;
+}

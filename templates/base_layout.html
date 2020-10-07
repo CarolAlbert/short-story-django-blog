@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'shorties/assets/styles.css' %}"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Homepage</title>
+  </head>
+
+  <body>
+    <div class="header">
+      <header>
+        <nav>
+          <ul class="nav_link">
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="{% url 'stories:list' %}">Stories</a></li>
+            {% if user.is_authenticated %}
+            <li><a href=" {% url 'stories:create' %}">New Story</a></li>
+            <li>
+              <div class="nav navbar-nav navbar-right">
+              <form class= "but" action = "{% url 'accounts:logout'%}" method = "post">  
+              {% csrf_token %}
+              <button type="submit">Logout</button>
+              </form>
+            </li>
+              {%else%}
+              <li><a href="{% url 'accounts:login'%}">Login</a></li>
+              <li><a href = "{% url 'accounts:signup' %}">Signup</a></li>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        </nav>
+      </header>
+    </div>
+
+    <div class="wrapper">{% block content %} {% endblock%}</div>
+  </body>
+</html>
